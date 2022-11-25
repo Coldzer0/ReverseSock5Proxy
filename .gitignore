@@ -50,3 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Project Related
+Socks5Agent/cmake-build-debug
+Socks5Agent/cmake-build-release
