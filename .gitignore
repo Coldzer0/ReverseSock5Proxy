@@ -54,3 +54,7 @@ dkms.conf
 # Project Related
 Socks5Agent/cmake-build-debug
 Socks5Agent/cmake-build-release
+Sock5Server/cmake-build-debug
+Sock5Server/cmake-build-release
+Build
+cmake
