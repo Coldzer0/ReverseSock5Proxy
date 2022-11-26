@@ -18,6 +18,7 @@ U can download a prebuilt from [Releases](https://github.com/Coldzer0/ReverseSoc
 
 ### TODO
 - [ ] Refactor the code to support multi OS
+- [X] Finish the Server code
 - [X] I don't know
 
 ### Resources
