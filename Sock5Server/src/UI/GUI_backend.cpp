@@ -1,3 +1,4 @@
+#define NOMINMAX
 #include <filesystem>
 #include "UI/GUI_backend.h"
 #include "Application.h"
