@@ -3,7 +3,7 @@
 A tiny Reverse Sock5 Proxy 
 
 
-### Server
+## Server
 
 The Server GUI Built with ImGui :V
 
@@ -12,9 +12,22 @@ The Server GUI Built with ImGui :V
 U can download a prebuilt from [Releases](https://github.com/Coldzer0/ReverseSock5Proxy/releases).
 <br>
 
-### Client/Agent
+### Build
 
-<b>Build it Yourself :P</b>
+You need 
+- gcc version 12+ [recommended one for windows](https://github.com/brechtsanders/winlibs_mingw/releases)
+- [Conan Package Manager](https://conan.io/)
+
+And run any script from the `scripts` folder, depend on your needs :V
+
+<hr>
+
+## Client/Agent
+
+### Build
+```bash
+gcc main.c -lws2_32 -O2 -s -o Sock5Agent
+```
 
 ### TODO
 - [ ] Refactor the code to support multi OS
