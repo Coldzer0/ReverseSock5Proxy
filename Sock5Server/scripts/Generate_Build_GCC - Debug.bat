@@ -13,7 +13,7 @@ del *.txt *.cmake *.json *.lock
 conan install .. -s build_type=Debug --build missing -s compiler=gcc -s compiler.libcxx=libstdc++11 -s compiler.version=12 -s compiler.cppstd=20 -if ../cmake
 
 cd ../Build
-cmake -DCMAKE_BUILD_TYPE=Debug -G Ninja -S .. -B .
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++ -DCMAKE_C_COMPILER=gcc -G Ninja -S .. -B .
 cmake --build . --target SOCK5Server -j 12
 
 cd ../scripts
